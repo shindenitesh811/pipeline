@@ -3,7 +3,7 @@ pipeline {
 	
 	agent any
 	environment{
-		uname = """"${
+		uname = """${
 		returnStdout: true,
                 scrip: 'echo "clang"'		
 		)}"""
