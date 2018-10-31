@@ -1,12 +1,11 @@
 pipeline {
-	def username = 'Nitesh'
+	
 	
 	agent any
 	stages {
 		stage('BUILD'){
 			steps {
-				echo "$username is genius"
-			}
+				echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"			}
 		}
 		
 		stage(TEST){
