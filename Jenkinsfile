@@ -3,7 +3,7 @@ pipeline {
 	
 	agent any
 	environment{
-	uname = 'nitesh'
+		uname = """"${sh(read -n)}"""
 	}
 	stages {
 		stage('BUILD'){
