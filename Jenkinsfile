@@ -2,10 +2,15 @@ pipeline {
 	
 	
 	agent any
+	environment{
+	uname = 'nitesh'
+	}
 	stages {
 		stage('BUILD'){
 			steps {
-				echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"			}
+				echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"	
+				echo "${uname}  is genius"
+			}
 		}
 		
 		stage(TEST){
