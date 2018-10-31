@@ -3,7 +3,10 @@ pipeline {
 	
 	agent any
 	environment{
-		uname = """"${sh(read -n)}"""
+		uname = """"${
+		returnStdout: true,
+                scrip: 'echo "clang"'		
+		)}"""
 	}
 	stages {
 		stage('BUILD'){
