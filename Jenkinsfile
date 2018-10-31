@@ -1,9 +1,11 @@
 pipeline {
+	def username = 'Nitesh'
+	
 	agent any
 	stages {
 		stage('BUILD'){
 			steps {
-				sh 'make'
+				echo "$username is genius"
 			}
 		}
 		
