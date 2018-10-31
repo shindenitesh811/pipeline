@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('BUILD'){
 			steps {
-				sh 'uptime'
+				archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 			}
 		}
 		
